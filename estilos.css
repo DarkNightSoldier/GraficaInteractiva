@@ -17,7 +17,7 @@ body{
 }
 
 .header ul{
-	text-align: center
+	text-align: center;
 }
 
 .header ul li{
@@ -38,4 +38,8 @@ body{
 
 .header ul li a:hover{
 	background-color: rgba(226, 250, 7, 0.5);
+}
+
+.header ul li a #logo{	
+	padding: 2px;
 }
