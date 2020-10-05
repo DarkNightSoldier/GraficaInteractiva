@@ -2,12 +2,12 @@
 /* CSS Document */
 
 @font-face { 
-    font-family: HappySans;             /* define una fuente */
-    src: url('archivos/HappySans.ttf');  /* indica su ubicación */
+    font-family: Acme;             /* define una fuente */
+    src: url('archivos/Acme.ttf');  /* indica su ubicación */
 }
 
 body{
-	font-family: HappySans; 
+	font-family: Acme; 
 	background-image: url('archivos/test.png');
 }
 
@@ -28,9 +28,14 @@ body{
 .header ul li a{
 	display: block;
 	text-decoration: none;
+	text-transform: uppercase;
 	color: #fff;
 	font-size: 20px;
 	letter-spacing: 3px;
 	font-weight: 600;
 	padding: 25px;
+}
+
+.header ul li a:hover{
+	background-color: rgba(226, 250, 7, 0.5);
 }
