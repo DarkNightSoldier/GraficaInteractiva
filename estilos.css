@@ -78,21 +78,20 @@ body{
 	color: #fff;
 	padding: 0% 2% 0% 2%;
 	left: 5%;
-	max-width: 80%};
+	max-width: 80%;
 }
 
-.article{
-	border: 2px solid black;
-	margin: 10px 7% 2% 7%;
-	padding: 10px 40px 20px 10px;
+/*Este elemento agrupa todo el contenido y lo centra en la ventana*/
+article{
+	max-width: 840px;
+    margin: auto; 
 }
 
-.row{
-	opacity: 1;
+article .row{
 	display:flex;
 }
 
-.column{
+article .column{
 	flex: 50%;
 	padding: 10px;
 }
