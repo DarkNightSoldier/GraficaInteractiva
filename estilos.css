@@ -29,12 +29,14 @@ body{
 	top: 0px;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
+	z-index: 60;
 }
 
 .header ul{
 	text-align: left;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
+	z-index: 50;
 }
 
 .header ul li{
@@ -129,6 +131,14 @@ iframe{
 }
 
 .character,.activity{
+	display: block;
+	max-width: 70%;
+	height:auto;
+	margin:auto;
+	border-radius: 8px;
+}
+
+.event{
 	display: block;
 	max-width: 70%;
 	height:auto;
