@@ -59,7 +59,7 @@
   background-color: blue;
 }
 
-#btn-4:checked ~ .slider-controls label[for="btn-5"] {
+#btn-5:checked ~ .slider-controls label[for="btn-5"] {
   background-color: blue;
 }
 
