@@ -42,15 +42,15 @@
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"] {
-  background-color: #ff4081;
+  background-color: blue;
 }
 
 #btn-2:checked ~ .slider-controls label[for="btn-2"] {
-  background-color: #ff4081;
+  background-color: blue;
 }
 
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: #ff4081;
+  background-color: blue;
 }
 
 /* SLIDES */
@@ -97,7 +97,7 @@
   color: #fff;
   border-radius: 3px;
   text-decoration: none;
-  background-color: #ff4081;
+  background-color: rgb(243, 219, 7);
 }
 
 .slide-image img {

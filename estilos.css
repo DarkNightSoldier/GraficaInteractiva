@@ -128,7 +128,7 @@ iframe{
 	margin-top: 10px;
 }
 
-.character{
+.character,.activity{
 	display: block;
 	max-width: 70%;
 	height:auto;
