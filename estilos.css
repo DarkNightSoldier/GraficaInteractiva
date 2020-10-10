@@ -3,11 +3,11 @@
 
 @font-face { 
     font-family: Acme;             /* define una fuente */
-	src: url('archivos/Acme.ttf');  /* indica su ubicación */
+	src: url('fonts/acme.ttf');  /* indica su ubicación */
 }
 @font-face { 
     font-family: HappySans;             /* define una fuente */
-	src: url('archivos/HappySans.ttf');  /* indica su ubicación */
+	src: url('fonts/happysans.ttf');  /* indica su ubicación */
 }
 
 *{
