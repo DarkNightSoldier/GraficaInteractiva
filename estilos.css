@@ -64,7 +64,7 @@ body{
   min-height: 500px;
 }
 
-.container1 .character{
+.container1 .chavo{
 	position: relative;
 	top: 70px;
 	left: 5%;
@@ -84,22 +84,54 @@ body{
 /*Este elemento agrupa todo el contenido y lo centra en la ventana*/
 article{
 	max-width: 840px;
-    margin: auto; 
-}
-
-article .row{
-	display:flex;
+	margin: auto; 
+	margin-bottom: 20px;
 }
 
 article .column{
-	flex: 50%;
+	float: left;
+	width: 50%;
 	padding: 10px;
+	height: auto;
+}
+
+article .row:after{
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  article .column{
+	margin: auto;
+    width: 100%;
+  }
 }
 
 h1{
 	font-size: 2.5em;
+	margin-top: 9px;
+	margin-bottom: 9px;
 }
 
 p{
 	font-size: 1.2em;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+/*Centra el elemento iframe*/
+iframe{
+	display:block;
+	margin:auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.character{
+	display: block;
+	max-width: 70%;
+	height:auto;
+	margin:auto;
+	border-radius: 8px;
 }
