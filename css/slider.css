@@ -1,7 +1,8 @@
 @charset "utf-8"; /*La codificación es UTF-8, permitiendo leer acentos del español*/
 /* CSS Document */
+/*Ver referencias, re-elaboardo de: https://codepen.io/Luxplanjay/details/JparYJ*/ 
 
-.slider {
+.slider{
   display:block;
   position: relative;
   background-color: white;
@@ -9,65 +10,64 @@
   height: 350px;
   margin: 50px auto;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+    0 3px 1px -2px rgba(0, 0, 0, 0.2); /*Añade efectos de sombra alrededor del marco de un elemento*/
+  overflow: hidden; /*La barra de desplazamiento para scroll se oculta*/
 }
 
-.slider-controls {
+.slider-controls{
   position: absolute;
   bottom: 0px;
   left: 50%;
   width: 200px;
   text-align: center;
-  transform: translatex(-50%);
+  transform: translatex(-50%); /*Traslada el elemento horizontalmente en el plano*/
   z-index: 40;
-
   list-style: none;
   text-align: center;
 }
 
-.slider input[type="radio"] {
+.slider input[type="radio"]{ /*Solamente se seleccionan campos de tipo radio*/
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 0; /*Es transparente, pues su opacidad es 0*/
   width: 0;
   height: 0;
 }
 
 .slider-controls label {
   display: inline-block;
-  border: none;
+  border: none; /*Quita los bordes*/
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: pointer; /*Cambia el cursor al estar sobre el elemento*/
   background-color: #212121;
   transition: background-color 0.2s linear;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"] {
-  background-color: blue;
+  background-color: #0000ff; /*Pinta el botón del deslizador de color azul*/
 }
 
 #btn-2:checked ~ .slider-controls label[for="btn-2"] {
-  background-color: blue;
+  background-color:  #0000ff;
 }
 
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: blue;
+  background-color:  #0000ff;
 }
 
 #btn-4:checked ~ .slider-controls label[for="btn-4"] {
-  background-color: blue;
+  background-color:  #0000ff;
 }
 
 #btn-5:checked ~ .slider-controls label[for="btn-5"] {
-  background-color: blue;
+  background-color:  #0000ff;
 }
 
 
-/* SLIDES */
+/*DIAPOSITIVAS/SLIDES*/
 
 .slides {
   list-style: none;
@@ -115,7 +115,7 @@
   max-height: 90%;
 }
 
-/* Slide animations */
+/*Animaciones de diapositivas*/
 #btn-1:checked ~ .slides .slide:nth-child(1) {
   transform: translatex(0);
   opacity: 1;
@@ -142,9 +142,9 @@
 }
 
 #btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
+  animation-name: swap-out; /*Animación de intercambio*/
+  animation-duration: 300ms; /*La animación dura 300ms*/
+  animation-timing-function: linear; /*Define el tipo de ciclo con que cambia la velocidad*/
 }
 
 #btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
@@ -171,7 +171,7 @@
   animation-timing-function: linear;
 }
 
-@keyframes swap-out {
+@keyframes swap-out { /*Selector para puntos de trayectoria*/
   0% {
     transform: translatex(0);
     opacity: 1;
@@ -187,11 +187,13 @@
   }
 }
 
+/*En ventanas de menos de 640px (Móviles) se muestra el contenido de la diapositiva en dos columnas*/
 @media screen and (max-width: 640px){
   .slide{
     display: table;
   }
   .slide-content,.slide-image{
+    /*Permite que se apile el contenido sobre la imagen de la diapositiva*/
     width: 100%;
   }
   .slider{

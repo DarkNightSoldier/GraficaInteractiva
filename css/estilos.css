@@ -315,3 +315,61 @@ tr:nth-child(even){
 tr:hover{
 	background-color: rgb(226, 250, 7); 
 }
+
+/*VÍNCULOS EN EL CUERPO DEL DOCUMENTO*/
+article a,article a:visited{
+	color:#00ff0d; /*Cambia el color del vínculo normal y ya visitado*/
+}
+
+/*MENÚ DE NAVEGACIÓN INTERNO DE PERSONAJES*/
+ .characters-menu{
+  width: 100%;
+  margin: 30px auto;
+  padding: 0;
+ }	
+ .characters-menu ul{
+  display: flex;
+  justify-content: center; /*Centra horizontalmente los elementos del flexbox*/
+  margin: auto;
+  list-style: none; /*Quita los bullet list*/
+  padding: 0;
+  width: 100%;
+  height: auto;
+  text-align: center; /*Centra el texto horizontalmente*/
+}
+
+.characters-menu ul li a {
+  display: block;
+  border: #000 solid 1px;
+  color: #000;
+  padding: 2px 0px;
+  margin: 20px 3px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  height: 50%;
+}
+
+/*El vínculo cambia de color al interactuar con él*/
+.characters-menu ul li a:hover {
+  background-color: rgba(250, 185, 7, 0.856);
+}
+
+.characters-menu h2{
+	text-align: center;
+}
+
+/*El menú interno pasa a ser vertical en ventanas de menos de 860px (Tabletas y celulares)*/
+@media screen and (max-width: 860px) {
+	.characters-menu ul{
+		display: inline;
+	}
+
+	/*Aumenta el tamaño del botón y quita el redondeo de bordes*/
+	.characters-menu ul li a{
+		margin: 0px auto;
+		border-radius: 0px;
+		width: 60%;
+		padding: 5px 0px;
+	}
+}
