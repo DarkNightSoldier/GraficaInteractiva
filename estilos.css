@@ -24,7 +24,7 @@ body{
 header{
 	position: fixed;
 	width: 100%;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.6);
 	left: 0px;
 	top: 0px;
 	margin: 0px 0px 0px 0px;
@@ -34,8 +34,8 @@ header{
 
 header ul{
 	text-align: left;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
+	margin: 0;
+	padding: 0;
 	z-index: 50;
 }
 
@@ -157,8 +157,7 @@ article .row:after{
   nav{
 	position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
 	float:right;
-    background: rgba(0.5, 0.5, 0.5, 0.2); /* rojo, verde, azul, alpha (transparencia) */
-	z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
+	background-color: rgba(0,0,0,0.6);
     width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
     margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
 	margin-top: 15%;
