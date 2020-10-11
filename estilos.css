@@ -52,7 +52,7 @@ header ul li a{
 	font-size: 18px;
 	letter-spacing: 3px;
 	font-weight: 600;
-	padding: 18px;
+	padding: 12px;
 }
 
 header ul li a:hover{
@@ -62,10 +62,6 @@ header ul li a:hover{
 /* elementos del menu desplegable*/
 #btn-menu {
     display: none;   /* oculta el checkbox cuando no es necesario*/
-} 
-header {
-    width: 100%;
-	z-index: 10;	/* coloca el checkbox por encima del contenido*/
 } 
 header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
     display: none;
@@ -124,28 +120,58 @@ article .row:after{
 }
 
 @media screen and (max-width: 860px) {
+	header{
+		width: 20%;
+		height: 100%;
+		background-color:rgba(0,0,0,1);
+	}
+	article{
+		position: relative;
+		left: 20%;
+		margin-right: 20%;
+	}
+	.container1 .title{
+		left:25%
+	}
+	header ul{
+	  flex-direction: column;
+	}
 	header ul li a{
 		font-size: 16px;
-		padding: 8px;
+		padding: 10px;
 	}
 	.container1 .title{
 		display:flexbox;
-		font-size: 3.5em;
+		font-size: 3em;
 		max-width: 70%;
+		margin-right: 20%;
 	}
 	.container1 .chavo{
-		display: block;
-	}
+	  display: block;
+	  position: relative;
+	  left:60%
+  }
 	article .column{
 		line-height: 1.8; 
 	}
 }
 
 @media screen and (max-width: 640px) {
-  .container1 .chavo{
-	  position: relative;
-	  left:60%
+  header{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	background-color: rgba(0,0,0,0.6);
   }
+  article{
+	position: relative;
+	left: 0%;  
+	margin-right: 0px;
+	margin: auto;
+  }
+  .container1 .title{
+	  margin-right: 0px;
+  }		
   article .column{
 	margin: auto;
     width: 100%;
