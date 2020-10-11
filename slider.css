@@ -183,3 +183,15 @@
     transform: translatex(100%);
   }
 }
+
+@media screen and (max-width: 640px){
+  .slide{
+    display: table;
+  }
+  .slide-content,.slide-image{
+    width: 100%;
+  }
+  .slider{
+    height: 500px;
+  }
+}
