@@ -145,3 +145,29 @@ iframe{
 	margin:auto;
 	border-radius: 8px;
 }
+
+.mapa,table{
+	width: 100%;
+	margin: 20px auto;
+}
+
+td,th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color:  rgb(247, 223, 14);
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: gainsboro;
+}
+
+tr:hover{
+	background-color: rgb(226, 250, 7);
+}
