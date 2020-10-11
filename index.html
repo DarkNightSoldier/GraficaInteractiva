@@ -1,30 +1,29 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página principal - La vecindad del Chavo</title>
+<head><!--Representa la colección de metadata del documento-->
+<meta charset="utf-8"><!--La codificación del documento será UTF-8 con el fin de poder leer acentos del español-->
+<meta lang="es"><!--El lenguaje del documento será español-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Permite el diseño RWD multidispositivo-->
+<title>Página principal - La vecindad del Chavo</title><!--Título de la página que aparecerá en la pestaña-->
 <link href="estilos.css" rel="stylesheet" type="text/css"><!-- llama el archivo estilos.css -->
-<link href="archivos/favicon.ico" rel="shorcut icon">
+<link href="archivos/favicon.ico" rel="shorcut icon"><!--Define el favicon, ícono que aparecerá en la pestaña-->
 </head>
 
-<body>
+<body><!--Representa el contenido del documento-->
+	<div class="container1"><!--Define una parte del documento, en particular un hijo de la clase container1-->
+		<img class="chavo" src="archivos/elchavo.png" alt="El chavo"></img><!--Representa una imagen-->
+		<h class="title">¡Bienvenidos a mi vecindad amigos!</h><!--Representa el encabezado del sitio-->
+	</div>
 
-<div class="container1">
-	<img class="chavo" src="archivos/elchavo.png"></img>
-	<h class="title">¡Bienvenidos a mi vecindad amigos!</h>
-</div>
-
-<header>
-	<input type="checkbox" id="btn-menu">
-	<label for="btn-menu">
+<header><!--Representa el contenido introductorio o cabecera-->
+	<input type="checkbox" id="btn-menu"><!--Representa una casilla de verificación, permite la elección booleana-->
+	<label for="btn-menu"><!-- El ícono del menú se muestra como label del checkbox, pero se oculta cuando no se necesita -->
 		<img src="archivos/menu.png" width="30px">
 	</label>
-	<nav>
-		<ul>
-		<li><a href="index.html">Inicio</a></li>
-		<li><a href="ubicacion.html">Ubicación</a></li>
+	<nav><!--Define el menú de navegación-->
+		<ul><!--Representa una lista desordenada-->
+		<li><a href="index.html">Inicio</a></li><!--Representa un elemento de lista-->
+		<li><a href="ubicacion.html">Ubicación</a></li><!--El elemento a con el atributo href representa un hipervínculo-->
 		<li><a href="inquilinos.html">Inquilinos</a></li>
 		<li><a href="actividades.html">Actividades</a></li>
 		<li><a href="historia.html">Historia</a></li>
@@ -33,11 +32,12 @@
 	</nav>
 </header>
 
+<!-- El elemento artículo agrupa todo lo que se encuentra en el cuerpo del documento -->
 <article>
-	<h1>Información general</h1>
+	<h1>Información general</h1><!--Representa el primer título más grande-->
 	<p>La vecindad del chavo del ocho es el lugar donde se desarrollaron las grabaciones del chavo del ocho, una
 	producción del difunto Roberto Gómez Bolaños, muy querido por niños, adultos y ancianos de diferentes edades,
-	principalmente de Latinoamérica.</p>
+	principalmente de Latinoamérica.</p><!--Representa un parrafo-->
 	<p>En la vecindad del chavo todos los días serán llenos de risas, gracias a sus particulares inquilinos y
 	actividades, por ello no hay excusa para que no le eches una revisadita a los detalles de esta instancia, tu amigo
 	el chavo te espera muy pronto.

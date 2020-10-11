@@ -5,7 +5,7 @@
 <meta lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personajes - La Vecindad del Chavo</title>
-<link href="estilos.css" rel="stylesheet" type="text/css"><!-- llama el archivo estilos.css -->
+<link href="estilos.css" rel="stylesheet" type="text/css">
 <link href="archivos/favicon.ico" rel="shorcut icon">
 </head>
 
@@ -32,15 +32,16 @@
     </header>
 
     <article>
-        <div class="row">
-            <div class="column">
+        <!--El cuerpo de la página se agrupa bajo una estructura de filas y columnas-->
+        <div class="row"><!--Espacio con la clase fila-->
+            <div class="column"><!--Espacio con la clase columna-->
                 <img class="character" src="archivos/chavo.jpg"></img>
             </div>
             <div class="column">
-                <h2>El chavo</h2>
+                <h2 id="chavo">El chavo</h2><!--Segundo título más grande, el selector id permite la navegación interna-->
                 <p>El chavo es un niño huérfano de 8 años, del que no se conoce el nombre, 
                     por lo que solo le llaman "Chavo". Es un personaje muy noble, está enamorado
-                    de Patty y le gustan mucho las tortas de Jamón.</p>
+                    de <a href="#paty" target="_self">Paty</a> y le gustan mucho las tortas de Jamón.</p>
 
                 <p>Es muy entusiasta, creativo y bien intencionado, pero también inocente y torpe, por lo
                     que otros niños se aprovechan de él. Llegó a la vecindad a los cuatro años de edad y vive
@@ -52,11 +53,13 @@
                 <img class="character" src="archivos/donramon.jpg"></img>
             </div>
             <div class=column>
-                <h2>Don Ramón</h2>
+                <h2 id="donramon">Don Ramón</h2>
                 <p>Don Ramón es un hombre viudo de 50 años de edad, que perdió a su mujer durante el 
-                parto de su hija, la Chilindrina. Vive en la vecindad junto a ella, en el departamento Nº 72, 
-                aunque en los primeros episodios vivía en el departamento de Doña Florinda (el Nº 14).
-                <p>En la serie original, el personaje era interpretado por el actor mexicano Ramón Valdés (1923-1988).</p>
+                parto de su hija, la <a href="#chilindrina" target="_self">Chilindrina</a>. Vive en la vecindad junto a ella, 
+                en el departamento Nº 72, aunque en los primeros episodios vivía en el departamento de 
+                <a href="#donaflorinda" target="_self">Doña Florinda</a> (el Nº 14).</p>
+                <p>En la serie original, el personaje era interpretado por el actor mexicano 
+                <a href="https://es.wikipedia.org/wiki/Ram%C3%B3n_Vald%C3%A9s" target="_blank">Ramón Valdés</a> (1923-1988).</p>
             </div>
         </div>
         <div class="row">
@@ -64,12 +67,13 @@
                 <img class="character" src="archivos/donaflorinda.jpg"></img>
             </div>
             <div class="column">
-                <h2>Doña Florinda</h2>
+                <h2 id="donaflorinda">Doña Florinda</h2>
                 <p>Doña Florinda es una mujer refinada de 38 años, que estuvo casada con un importante marino, 
-                Don Federico Matalascallando, con quién tuvieron a su único hijo, Quico. Lamentablemente, 
+                Don Federico Matalascallando, con quién tuvieron a su único hijo, 
+                <a href="#quico" target="_self">Quico</a>. Lamentablemente, 
                 Doña Florinda quedó viuda muy poco tiempo después, luego de que el barco en el que viajaba
-                su esposo naufragara. Es así que debió hacerse cargo de la crianza de Quico, a quién 
-                le enseñó que solo debía juntarse con niños de su clase y que era muy superior a los demás.</p>
+                su esposo naufragara. Es así que debió hacerse cargo de la crianza de <a href="#quico" target="_self">Quico</a>, 
+                a quién le enseñó que solo debía juntarse con niños de su clase y que era muy superior a los demás.</p>
             </div>
         </div>
         <div class="row">
@@ -77,13 +81,14 @@
                 <img class="character" src="archivos/gloria.png""></img>
             </div>
             <div class="column">
-                <h2>Gloria</h2>
-                <p>Gloria es la tía de Paty, y Don Ramón se enamoró de ella, pues Gloria era la mujer mas guapa de la
-                    vecindad (Don Ramón la describió como la reina de la vecindad, y no solo eso, sino la reina de
-                    todas las vecindades que puedan existir).</p>
-                <p>Gloria llegó a la vecindad buscando un departamento y conoce a Don Ramón y quiso que pasara a su
-                    casa, pero, debido a una confusión, lo golpeó. Es una mujer una mujer joven, delgada y bastante
-                    atractiva.</p>
+                <h2 id="gloria">Gloria</h2>
+                <p>Gloria es la tía de <a href="#paty" target="_self">Paty</a>, y <a href="#donramon" target="_self">Don Ramón</a>
+                    se enamoró de ella, pues Gloria era la mujer mas guapa de la
+                    vecindad (<a href="#donramon" target="_self">Don Ramón</a> la describió como la reina de la vecindad, 
+                    y no solo eso, sino la reina de todas las vecindades que puedan existir).</p>
+                <p>Gloria llegó a la vecindad buscando un departamento y conoce a <a href="#donramon" target="_self">Don Ramón</a>
+                    y quiso que pasara a su casa, pero, debido a una confusión, lo golpeó. Es una mujer una mujer joven, delgada 
+                    y bastante atractiva.</p>
             </div>
         </div>
         <div class="row">
@@ -91,11 +96,12 @@
                 <img class="character" src="archivos/donacleotilde.jpg""></img>
             </div>
             <div class="column">
-                <h2>Doña Cleotilde</h2>
+                <h2 id="cleotilde">Doña Cleotilde</h2>
                 <p>Doña Cleotilde es una mujer bondadosa que se preocupa por quedar bien ante todos. 
-                    Los niños la llaman "la bruja del 71" porque vive en el número 71 de la vecindad.</p>
-                <p>Busca ganar el afecto de Don Ramón y, para ello, le prepara pasteles o platos de comida, 
-                    le hace regalos, le presta maletas cuando necesita, le da medicinas para el insomnio, etc. </p>
+                    Los niños la llaman "La bruja del 71" porque vive en el número 71 de la vecindad.</p>
+                <p>Busca ganar el afecto de <a href="#donramon" target="_self">Don Ramón</a> y, para ello, 
+                    le prepara pasteles o platos de comida, le hace regalos, le presta maletas cuando necesita, 
+                    le da medicinas para el insomnio, etc. </p>
             </div>
         </div>
         <div class="row">
@@ -103,40 +109,59 @@
                 <img class="character" src="archivos/quico.png"></img>
             </div>
             <div class="column">
-                <h2>Quico</h2>
-                <p>Quico o Federico Bardón de la Regueira tiene 9 años y es el único hijo de Doña Florinda y 
-                    primo de la Popis. Es un niño que tiene todo para él y su mamá lo ha criado con la creencia de que él
+                <h2 id="quico">Quico</h2>
+                <p>Quico o Federico Bardón de la Regueira tiene 9 años y es el único hijo de 
+                    <a href="#donaflorinda" target="_self">Doña Florinda</a> y 
+                    primo de la <a href="https://elchavo.fandom.com/es/wiki/Popis" target="_blank">Popis</a>. 
+                    Es un niño que tiene todo para él y su mamá lo ha criado con la creencia de que él
                     es mejor que la gente de la vecindad y que los vecinos de allí no son de su altura.</p>
-                <p>Sin embargo, Quico no termina de convencerse de ello y termina siempre involucrándose con lo que Doña 
-                   Florinda llama "La chusma".</p>
+                <p>Sin embargo, Quico no termina de convencerse de ello y termina siempre involucrándose con lo que 
+                   <a href="#donaflorinda" target="_self">Doña Florinda</a> llama "La chusma".</p>
             </div>
         </div>
         <div>
             <div class="row">
                 <div class="column">
-                    <img class="character" src="archivos/chilindrina.jpg"></img>
+                    <img id="chilindrina" class="character" src="archivos/chilindrina.jpg"></img>
                 </div>
                 <div class="column">
-                    <h2>La Chilindrina</h2>
-                    <p>Chilindrina es la hija de Don Ramón. Es muy astuta y manipuladora, frecuentemente se aprovecha
-                        de la inocencia e ingenuidad del Chavo y de Quico para conseguir lo que ella desea.</p>
-                    <p>Le gusta el Chavo, aunque suele ocultarlo y solo lo demuestra cuando Patty se acerca al Chavo, 
-                        poniéndose celosa. En la versión original es interpretada por María Antonieta de las Nieves.</p>
+                    <h2 id="chilindrina">La Chilindrina</h2>
+                    <p>Chilindrina es la hija de <a href="#donramon" target="_self">Don Ramón</a>. 
+                        Es muy astuta y manipuladora, frecuentemente se aprovecha de la inocencia e ingenuidad del 
+                        <a href="#chavo" target="_self">Chavo</a> y de <a href="#quico" target="_self">Quico</a> para 
+                        conseguir lo que ella desea.</p>
+                    <p>Le gusta el <a href="#chavo" target="_self">Chavo</a>, aunque suele ocultarlo y solo lo demuestra 
+                        cuando <a href="#paty" target="_self">Paty</a> se acerca al <a href="#chavo" target="_self">Chavo</a>, 
+                        poniéndose celosa. En la versión original es interpretada por 
+                        <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Antonieta_de_las_Nieves" target="_blank">María Antonieta de las Nieves</a>.</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <img class="character" src="archivos/jaimito.jpg""></img>
-                            </div>
-                            <div class=" column">
-                <h2>Jaimito el Cartero</h2>
+            </div>
+            <div class="column">
+                <h2 id="jaimito">Jaimito el Cartero</h2>
                 <p>Jaime Garavito es el cartero de la vecindad. Es un viejito negligente, olvidadizo y tierno.
                     Tiene una bicicleta que nunca monta, ya que no aprendió a usarla, porque en su pueblo natal
-                    Tangamandapio, solamente se anda a pie o en burro. </p>
-                <p>Según el Chavo, Jaimito es experto en las plantas y debió ser jardinero en vez de cartero, pero Jaimito
-                    dice
-                    que fue cartero toda su vida </p>
+                    <a href="https://es.wikipedia.org/wiki/Tangamandapio" target="_blank">Tangamandapio</a>, solamente se 
+                    anda a pie o en burro. </p>
+                <p>Según el <a href="#chavo" target="_self">Chavo</a>, Jaimito es experto en las plantas y debió ser 
+                    jardinero en vez de cartero, pero Jaimito dice que fue cartero toda su vida </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img class="character" src="archivos/paty.png"></img>
+            </div>
+            <div class="column">
+                <h2 class="paty">Paty</h2>
+                <p>Es la niña bonita de la vecindad y <a href="#chavo" target="_self">el Chavo</a> está muy enamorado de ella, 
+                   pero <a href="#chilindrina" target="_self">Chilindrina</a> y Popis sienten celos de ella, ya que ellas también 
+                   quieren al Chavo.</p>
+                <p>Vive con su tía <a href="#gloria" target="_self">Gloria</a>, la cual la ha educado muy bien; 
+                   esa es la razón por la cual Paty es una niña muy buena.</p>
             </div>
         </div>
     </article>

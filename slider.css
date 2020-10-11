@@ -1,3 +1,6 @@
+@charset "utf-8"; /*La codificación es UTF-8, permitiendo leer acentos del español*/
+/* CSS Document */
+
 .slider {
   display:block;
   position: relative;

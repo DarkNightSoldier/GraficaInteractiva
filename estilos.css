@@ -1,87 +1,90 @@
-@charset "utf-8";
+@charset "utf-8"; /*La codificación es UTF-8, permitiendo leer acentos del español*/
 /* CSS Document */
 
 @font-face { 
-    font-family: Acme;             /* define una fuente */
-	src: url('fonts/acme.ttf');  /* indica su ubicación */
+    font-family: Acme;             /* Define una fuente */
+	src: url('fonts/acme.ttf');  /* Indica su ubicación */
 }
 @font-face { 
-    font-family: HappySans;             /* define una fuente */
-	src: url('fonts/happysans.ttf');  /* indica su ubicación */
+    font-family: HappySans;          
+	src: url('fonts/happysans.ttf'); 
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{ /*Define un estilo para todo elemento*/
+  box-sizing: border-box; /*El ancho especificado será el equivalente al ancho total*/
+  margin: 0; /*La distancia de la caja a la página o el elemento será 0*/
+  padding: 0; /*La distancia del contenido hasta el borde de la caja será 0*/
 }
 
 body{
 	font-family: Acme;
-	background-color: rgba(119, 118, 118, 0.1);
+	background-color: rgba(119, 118, 118, 0.1);/*Define un color de fondo*/
 }
 
 header{
-	position: fixed;
-	width: 100%;
+	position: fixed;/*El elemento quedará fijo aun cuando se haga scroll*/
+	width: 100%; /*El ancho será del 100%*/
 	background-color: rgba(0,0,0,0.5);
-	left: 0px;
-	top: 0px;
+	left: 0px; /*Define una posición respecto al lado izquierdo de la página*/
+	top: 0px; /*Define una posición respecto al lado superior de la página*/
 	margin: 0;
 	padding: 0;
-	z-index: 60;
+	z-index: 60; /*Define el nivel/capa del elemento, en este caso un índice alto para asegurar que el menu esta por encima de todo lo demás*/
 }
 
 header ul{
-	text-align: left;
+	text-align: left; /*El texto se alineará a izquierda*/
 	margin: 0;
 	padding: 0;
 	z-index: 50;
 }
 
 header ul li{
-	list-style: none;
-	display: inline-block;
+	list-style: none; /*Quita las viñetas de lista*/
+	display: inline-block; /*El elemento genera una caja de elemento de bloque que fluye con el contenido circundante como si fuera una sola caja en línea*/
 }
 
 header ul li a{
-	display: block;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #fff;
+	display: block; /*El elemento genera un cuadro de elemento de bloque*/
+	text-decoration: none; /*El vínculo no tendrá color especial*/
+	text-transform: uppercase; /*El texto será transformado a mayúsculas*/
+	color: #fff; /*El color del texto será blanco*/
 	font-size: 18px;
-	letter-spacing: 3px;
-	font-weight: 600;
+	letter-spacing: 3px; /*Especifica el espacio horizontal entre letras*/
+	font-weight: 600; /*Es equivalente a hacer negrita,se aumenta el grosor del trazo*/
 	padding: 12px;
 }
 
+/*El vínculo del menu cambiará de color al ser seleccionado*/
 header ul li a:hover{
 	background-color: rgba(226, 250, 7, 0.5);
 }
 
-/* elementos del menu desplegable*/
+/*Elementos del menu desplegable*/
 #btn-menu {
-    display: none;   /* oculta el checkbox cuando no es necesario*/
+    display: none;   /*Oculta el checkbox cuando no es necesario*/
 } 
-header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
+header label {     /*Coloca el checkbox en un lugar y tamaño exactos*/
     display: none;
     width: 30px;
-    height: 30px;
+    height: 30px; /*La altura del elemento será de 30 pixeles*/
     position: absolute;
     left: 20px;
     top: 30px;
 } 
 header label:hover {
-    cursor: pointer;    /* cambia el cursor sobre el checkbox para indicar la interacción*/
+    cursor: pointer;    /*Cambia el cursor sobre el checkbox para indicar la interacción*/
 }
 
+/*Contenedor de encabezado con el chavo y el título de la página*/
 .container1{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("archivos/lavecindad.jpg");
-  min-height: 500px;
+  background-repeat: no-repeat; /*El fondo no se repetirá en ninguno de los ejes*/
+  background-size: cover; /*Ajusta el fondo al tamaño del contenedor*/
+  background-image: url("archivos/lavecindad.jpg"); /*Asocia el fondo del elemento a una imagen*/
+  min-height: 500px; /*La altura minima del objeto será de 500 pixeles*/
 }
 
+/*Posiciona a el chavo de acuerdo con el ancho de la ventana*/
 .container1 .chavo{
 	position: relative;
 	top: 70px;
@@ -89,6 +92,7 @@ header label:hover {
 	height: 400px;
 }
 
+/*Posiciona al título de la página de acuerdo al tamaño de la ventana*/
 .container1 .title{
 	position: relative;
 	font-family: HappySans;
@@ -101,42 +105,54 @@ header label:hover {
 
 /*Este elemento agrupa todo el contenido y lo centra en la ventana*/
 article{
-	max-width: 840px;
-	margin: auto; 
-	margin-bottom: 20px;
+	max-width: 840px; /*El tamaño del elemento será máximo de 840 pixeles*/
+	margin: auto; /*Permite centrar el elemento horizontalmente*/
+	margin-bottom: 20px; /*Define una distancia del elemento a otro elemento en la parte inferior*/
 }
 
 article .column{
-	float: left;
-	width: 50%;
+	float: left; /*El elemento flota a la izquierda de su bloque contenedor*/
+	width: 50%; /*El ancho será la mitad del contenedor*/
 	padding: 10px;
-	height: auto;
+	height: auto; /*El alto será de acuerdo al contenido*/
 }
 
 article .row:after{
   	content: "";
-  	display: table;
-  	clear: both;
+  	display: table; /*Este elemento se comporta como un elemento HTML <table>*/
+  	clear: both; /*Limpia la flotación después de las columnas*/
 }
 
+/*ADAPTACIÓN A MÓVIL Y TABLETA*/
+
+/*Cuando la ventana mida menos de 860px (Tamaño tableta)*/
 @media screen and (max-width: 860px) {
+	/*El menú será vertical para tableta y alineado verticalmente*/
 	header{
-		display: flex;
-		align-items: center;
+		display: flex; /*El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de flexbox*/
+		align-items: center; /*Los elementos se alinearán verticalmente*/
 		width: 20%;
 		height: 100%;
 		background-color:rgba(241, 198, 2, 1);
 	}
+
+	/*Se aumentará la distancia del contenido del cuerpo del documento hacia la izquierda con el fin de acomodar el menú verticalmente*/
 	article{
 		padding-left: 22%;
 	}
+
+	/*Los elementos del menú serán mostrados verticalmente*/
 	header ul{
 	  flex-direction: column;
 	}
+
+	/*El tamaño de la letra será modificado y se establece una distancia de 10px entre vínculos*/
 	header ul li a{
 		font-size: 16px;
 		padding: 10px;
 	}
+
+	/*El título será acomodado y corrido hacia la derecha*/
 	.container1 .title{
 		left:25%;
 		display:flexbox;
@@ -144,80 +160,109 @@ article .row:after{
 		max-width: 70%;
 		margin-right: 20%;
 	}
+
+	/*El chavo cambiará de posición*/
 	.container1 .chavo{
 	  display: block;
 	  position: relative;
 	  left:60%
-  }
+	}
+	
+	/*El interlineado aumentará para hacer más legible el texto*/
 	article .column{
 		line-height: 1.8; 
 	}
 }
 
+/*Cuando la ventana mida menos de 640px (Tamaño de móvil)*/
 @media screen and (max-width: 640px) {
-  header{
-	display: block;
-	align-items: none;  
-	position: fixed;
-	width: 100%;
-	height: auto;
-	background-color: rgba(0,0,0,0.5);
-  }
-  article{
-	padding-left: 2%;
-	margin: auto;
-  }
-  .container1 .title{
-	  left:0%;
-	  margin-right: 0px;
-  }		
-  article .column{
-	margin: auto;
-    width: 100%;
-  }
-  header ul{
-	  display: flex;
-	  flex-direction: column;
-  }
-  	table{
-		display: flex;
-		max-width: 100%;
-		overflow-x: auto;
+	/*El menú se comportará como bloque y volverá a ser horizontal*/	
+	header{
+		display: block;
+		align-items: none;  
+		position: fixed;
+		width: 100%;
+		height: auto;
+		background-color: rgba(0,0,0,0.5);
 	}
-  nav{
-	position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
-	float:right;
-	background-color: rgba(0,0,0,0.5);
-    width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
-    margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
-	margin-top: 15%;
-	transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
-  }
-  
-  header label{
-	  display: block;
-  }
 
-  #btn-menu{
-	position: absolute;
-	top: 0px;
-  }
+	/*Se restablece la distancia hacia la izquierda del elemento que contiene el cuerpo de nuestro documento*/
+	article{
+		padding-left: 2%;
+		margin: auto; /*El elemento se centrará hacia izquierda y derecha equitativamente*/
+	}
 	
-  #btn-menu:checked ~ nav {  /* el checkbox controla las dos posiciones del menu */
-		margin-left: 1px;
-  }
+	/*Se restablece la posición del título que acompaña al Chavo*/
+	.container1 .title{
+		left:0%;
+		margin-right: 0px;
+		font-size: 2.5em; /*Se reduce el tamaño de letra*/ 
+	}
+	
+	/*Las columnas se apilarán una sobre la otra verticalmente*/
+	article .column{
+		margin: auto;
+		width: 100%;
+	}
+
+	/*Los vínculos se mostrarán verticalmente*/
+	header ul{
+		display: flex;
+		flex-direction: column;
+	}
+
+	/*La tabla ya no cabe,será necesario permitir que se haga scroll horizontalmente sobre ella*/
+	table{
+		display: flex; /*Se comporta como un flexbox*/
+		max-width: 100%;
+		overflow-x: auto; /*Permite el scroll al sobrepasar el tamaño de la ventana*/
+	}
+
+	nav{
+		position: fixed;  /*Sostiene la posición aunque se haga scroll en el contenido */
+		float:right; /*El menú flotará por izquierda*/
+		background-color: rgba(0,0,0,0.5);
+		width: 40%; /*Se define el ancho del fondo del menú*/
+		margin-left: -60%; /*Se oculta el menú porque se coloca por fuera de la ventana*/
+		margin-top: 15%; /*El menú se distanciará del botón que permitirá su despliegue*/
+		transition: all 1s;   /*La animación que permite desplegar el Menú dura 1 segundo*/
+	}
+	
+	header label{
+		display: block;
+	}
+
+	#btn-menu{ /*Ël botón que despliega el menú se encontrará en la parte superior de la página*/
+		position: absolute;
+		top: 0px;
+	}
+		
+	#btn-menu:checked ~ nav {  /*El checkbox controla las dos posiciones del Menú*/
+			margin-left: 1px;
+	}
 }
+
+
+/*TEXTO*/
+
+/*Modifica el tamaño del primer encabezado/título más grande*/
 h1{
 	font-size: 2.5em;
+	/*Modifica la distancia del título repecto a otros elementos verticalmente*/
 	margin-top: 9px;
 	margin-bottom: 9px;
 }
 
+/*Modifica el tamaño del parráfo*/
 p{
 	font-size: 1.2em;
+	/*Aumenta la distancia con otros elementos,apilados superiormente o inferiormente*/
 	margin-top: 7px;
 	margin-bottom: 7px;
 }
+
+
+/*ELEMENTOS QUE SE AGREGAN AL CUERPO DE LA PÁGINA*/
 
 /*Centra el elemento iframe*/
 iframe{
@@ -227,50 +272,46 @@ iframe{
 	margin-top: 10px;
 }
 
-.character,.activity{
-	display: block;
-	max-width: 70%;
-	height:auto;
-	margin:auto;
-	border-radius: 8px;
+/*Elemento asociados a imágenes en la página*/
+.character,.activity,.event{
+	display: block; /*Se comporta como bloque*/
+	max-width: 70%; /*Máximo ocupará 70% de ancho del contenedor*/
+	height:auto; /*La altura será automática*/
+	margin:auto; /*Centra por izquierda y derecha el elemento*/
+	border-radius: 8px; /*Redondea los bordes del elemento*/
 }
 
-.event{
-	display: block;
-	max-width: 70%;
-	height:auto;
-	margin:auto;
-	border-radius: 8px;
-}
-
+/*Definimos el ancho del mapa de navegación y el elemento table*/
 .mapa,table{
 	width: 100%;
 	margin: 20px auto;
 }
 
+/*Define el ancho y alto del mapa de google*/
 .gmap{
-	width: 80%;
+	width: 80%; /*El ancho será de acuerdo al tamaño de la ventana*/
 	height: 400px;
 	border: 0;
 }
 
 td,th{
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #000000; /*Define el borde de los elementos de la tabla, en este caso negro y de 1 pixel*/
+  padding: 8px; /*Los elementos de la tabla estarán distanciados por 8 pixeles a cada lado*/
 }
 
+/*El encabezado tendrá color azul y su texto será en color blanco*/
 th{
-	padding-top: 12px;
-	padding-bottom: 12px;
 	text-align: center;
 	background-color:  rgb(247, 223, 14);
-	color: white;
+	color:#fff;
 }
 
+/*Las filas impares tendrán color gris*/
 tr:nth-child(even){
 	background-color: gainsboro;
 }
 
+/*Las filas cambiará de color al interactuar con ella*/
 tr:hover{
-	background-color: rgb(226, 250, 7);
+	background-color: rgb(226, 250, 7); 
 }
