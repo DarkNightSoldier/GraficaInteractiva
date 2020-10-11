@@ -121,17 +121,14 @@ article .row:after{
 
 @media screen and (max-width: 860px) {
 	header{
+		display: flex;
+		align-items: center;
 		width: 20%;
 		height: 100%;
-		background-color:rgba(0,0,0,1);
+		background-color:rgba(241, 198, 2, 1);
 	}
 	article{
-		position: relative;
-		left: 20%;
-		margin-right: 20%;
-	}
-	.container1 .title{
-		left:25%
+		padding-left: 22%;
 	}
 	header ul{
 	  flex-direction: column;
@@ -141,6 +138,7 @@ article .row:after{
 		padding: 10px;
 	}
 	.container1 .title{
+		left:25%;
 		display:flexbox;
 		font-size: 3em;
 		max-width: 70%;
@@ -165,8 +163,7 @@ article .row:after{
   }
   article{
 	position: relative;
-	left: 0%;  
-	margin-right: 0px;
+	padding-left: 2%;
 	margin: auto;
   }
   .container1 .title{
