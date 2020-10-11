@@ -149,14 +149,14 @@ article .row:after{
 	/*El tamaño de la letra será modificado y se establece una distancia de 10px entre vínculos*/
 	header ul li a{
 		font-size: 16px;
-		padding: 10px;
+		padding: 10px 3px;
 	}
 
 	/*El título será acomodado y corrido hacia la derecha*/
 	.container1 .title{
 		left:25%;
 		display:flexbox;
-		font-size: 3em;
+		font-size: 2em;
 		max-width: 70%;
 		margin-right: 20%;
 	}
