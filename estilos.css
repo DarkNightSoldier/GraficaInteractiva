@@ -24,7 +24,7 @@ body{
 header{
 	position: fixed;
 	width: 100%;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
 	left: 0px;
 	top: 0px;
 	margin: 0;
@@ -156,10 +156,12 @@ article .row:after{
 
 @media screen and (max-width: 640px) {
   header{
+	display: block;
+	align-items: none;  
 	position: fixed;
 	width: 100%;
 	height: auto;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
   }
   article{
 	position: relative;
@@ -167,6 +169,7 @@ article .row:after{
 	margin: auto;
   }
   .container1 .title{
+	  left:0%;
 	  margin-right: 0px;
   }		
   article .column{
@@ -180,7 +183,7 @@ article .row:after{
   nav{
 	position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
 	float:right;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
     width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
     margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
 	margin-top: 15%;
