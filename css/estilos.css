@@ -3,11 +3,11 @@
 
 @font-face { 
     font-family: Acme;             /* Define una fuente */
-	src: url('fonts/acme.ttf');  /* Indica su ubicación */
+	src: url('../fonts/acme.ttf');  /* Indica su ubicación */
 }
 @font-face { 
     font-family: HappySans;          
-	src: url('fonts/happysans.ttf'); 
+	src: url('../fonts/happysans.ttf'); 
 }
 
 *{ /*Define un estilo para todo elemento*/
@@ -80,7 +80,7 @@ header label:hover {
 .container1{
   background-repeat: no-repeat; /*El fondo no se repetirá en ninguno de los ejes*/
   background-size: cover; /*Ajusta el fondo al tamaño del contenedor*/
-  background-image: url("archivos/lavecindad.jpg"); /*Asocia el fondo del elemento a una imagen*/
+  background-image: url("../archivos/lavecindad.jpg"); /*Asocia el fondo del elemento a una imagen*/
   min-height: 500px; /*La altura minima del objeto será de 500 pixeles*/
 }
 
