@@ -308,7 +308,7 @@ th{
 
 /*Las filas impares tendrán color gris*/
 tr:nth-child(even){
-	background-color: gainsboro;
+	background-color: #dcdcdc;
 }
 
 /*Las fila cambiará de color al interactuar con ella*/
