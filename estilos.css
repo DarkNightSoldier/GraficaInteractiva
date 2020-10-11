@@ -12,8 +12,8 @@
 
 *{
   box-sizing: border-box;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body{
@@ -242,6 +242,12 @@ iframe{
 .mapa,table{
 	width: 100%;
 	margin: 20px auto;
+}
+
+.gmap{
+	width: 80%;
+	height: 400px;
+	border: 0;
 }
 
 td,th{
