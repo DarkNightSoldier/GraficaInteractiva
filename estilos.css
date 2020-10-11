@@ -311,7 +311,7 @@ tr:nth-child(even){
 	background-color: gainsboro;
 }
 
-/*Las filas cambiará de color al interactuar con ella*/
+/*Las fila cambiará de color al interactuar con ella*/
 tr:hover{
 	background-color: rgb(226, 250, 7); 
 }
