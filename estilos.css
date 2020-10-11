@@ -164,7 +164,6 @@ article .row:after{
 	background-color: rgba(0,0,0,0.5);
   }
   article{
-	position: relative;
 	padding-left: 2%;
 	margin: auto;
   }
@@ -180,6 +179,11 @@ article .row:after{
 	  display: flex;
 	  flex-direction: column;
   }
+  	table{
+		display: flex;
+		max-width: 100%;
+		overflow-x: auto;
+	}
   nav{
 	position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
 	float:right;
