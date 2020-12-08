@@ -5,6 +5,7 @@ var botonAtras, botonAdelante, botonAdelanteAlpha, botonAtrasAlpha;
 var boton1 = false, boton2 = false, boton3 = false, boton4 = false, boton5 = false;
 var posX=0;
 var canvas;
+var widthWindow;
 
 function preload(){
   fondo = loadImage("archivos/fondo.png");
@@ -15,19 +16,24 @@ function preload(){
   tarjeta4 = loadImage("archivos/tarjeta4.png");
   tarjeta5 = loadImage("archivos/tarjeta5.png");
   botonAtras = loadImage("archivos/atras.png");
-  botonAdelanteAlpha = loadImage("archivos/opacadelante.png")
-  botonAtrasAlpha = loadImage("archivos/opacatras.png")
+  botonAdelanteAlpha = loadImage("archivos/opacadelante.png");
+  botonAtrasAlpha = loadImage("archivos/opacatras.png");
   botonAdelante = loadImage("archivos/adelante.png");
 }
 
 function setup() {
-  canvas = createCanvas(600, 400);
+  canvas = createCanvas(400,400);
   // Vincula al elemento con id canvas, el lienzo generado por p5.js
   canvas.parent("map");
   fondo.resize(0,800);
 }
 
+function adjustCanvas(){
+  document.getElementById("defaultCanvas0").style = "width:400px; height:400px; margin:auto; display:block;"
+}
+
 function draw() {
+  adjustCanvas();
   background(220);
   pasarFondo();
   image(fondo,0,-150);
@@ -72,7 +78,7 @@ function botonesAvance(){
 
 function botonBarril(){
   var x = 300;
-  var y = 350;
+  var y = 320;
   push();
   fill('orange');
   if(mouseIsPressed & (x+posX-20<=mouseX & x+posX+20>=mouseX) & (y-20<=mouseY & y+20>=mouseY)){
