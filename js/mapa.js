@@ -3,13 +3,13 @@ var boton1 = false, boton2 = false, boton3 = false, boton4 = false, boton5 = fal
 var posX=0;
 
 function preload(){
-  fondo = loadImage("../archivos/fondo.png");
-  tarjeta = loadImage("../archivos/vacio.png");
-  tarjeta1 = loadImage("../archivos/tarjeta1.png");
-  tarjeta2 = loadImage("../archivos/tarjeta2.png");
-  tarjeta3 = loadImage("../archivos/tarjeta3.png");
-  tarjeta4 = loadImage("../archivos/tarjeta4.png");
-  tarjeta5 = loadImage("../archivos/tarjeta5.png");
+  fondo = loadImage("archivos/fondo.png");
+  tarjeta = loadImage("archivos/vacio.png");
+  tarjeta1 = loadImage("archivos/tarjeta1.png");
+  tarjeta2 = loadImage("archivos/tarjeta2.png");
+  tarjeta3 = loadImage("archivos/tarjeta3.png");
+  tarjeta4 = loadImage("archivos/tarjeta4.png");
+  tarjeta5 = loadImage("archivos/tarjeta5.png");
 }
 
 function setup() {
