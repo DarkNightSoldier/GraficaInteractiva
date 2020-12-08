@@ -78,7 +78,7 @@ function botonesAvance(){
   }
   if(mouseIsPressed & (width-60<=mouseX & width-20>=mouseX) & (360<=mouseY & 400>=mouseY)){
     image(botonAdelante,width-60-posX,350);
-    if(posX>=-885){
+    if(posX>=-655){
       posX -=5;
     }
   }else{
