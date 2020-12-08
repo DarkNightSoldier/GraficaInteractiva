@@ -288,9 +288,11 @@ iframe{
 	margin: 20px auto;
 }
 
-/*Define el ancho y alto del mapa de google*/
-.gmap{
-	width: 80%; /*El ancho será de acuerdo al tamaño de la ventana*/
+/*Define el ancho y alto del mapa interactivo*/
+#map{
+	display: block;
+	margin: auto;
+	width: 100%; /*El ancho será de acuerdo al tamaño de la ventana*/
 	height: 400px;
 	border: 0;
 }
