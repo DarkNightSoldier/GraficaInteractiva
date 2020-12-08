@@ -36,7 +36,39 @@
         <img class="mapa" src="archivos/navegacionmapa.png"></img>
 
         <h2>Proceso de elaboración Mapa Interactivo</h2>
-        <p>Para el despliegue del mapa interactivo se usó la libreria p5.js</p>
+        </p>
+        <div class="row">
+            <div class="column">
+                <img class="character" src="archivos/pixlr.png" alt="Pixlr"></img>
+            </div>
+            <div class="column">
+                <h4>1. Proceso de elaboración de las tarjetas</h4>
+
+                <p>Para la elaboración de las tarjetas se usó una alternativa gratuita a Photoshop,llamada <a href="https://pixlr.com/es/e/" target="_blank">Píxlr Editor</a>, para
+                    ello se creo un nuevo lienzo transparente de 220x315px, se añadió un cuadro, texto, imágenes y un botón rojo con el que se pueda cerrar la tarjeta. Posteriormente
+                    se exportaron en formato png y se guardaron en la carpeta archivos del proyecto.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img class="character" src="archivos/p5.png" alt="p5.js"></img>
+            </div>
+            <div class="column">
+                <h4>2. Libreria de JavaScript usada</h4>
+
+                <p>Para el despliegue del mapa interactivo se usó la libreria de programación gráfica p5.js, la documentación de esta libreria puede encontrarse en
+                    <a href="https://p5js.org/reference/" target="_blank">p5js.org/reference</a>.</p>
+
+                <p>Esta libreria consta de 3 funciones principales: <b>preload()</b> que nos permite cargar los archivos necesarios para la ejecución de nuestro
+                    script (Funciona como la función preload() de Phaser), <b>setup()</b> que nos permite ajustar las propiedades de nuestro script y <b>draw()</b> donde 
+                    escribimos las acciones que queremos que se repitan durante la ejecución del Script (Funciona como la función update() de Phaser).
+                </p>
+
+                <p>Para la correcta ejecución de esta librería, bastó con descargar la libreria del <a href="https://p5js.org/download/" target="_blank">sitio de p5.js</a>
+                    e incluir el archivo <b>p5.min.js</b> en el proyecto, el cual se puede encontrar en la carpeta libraries.</p>
+            </div>
+        </div>
 
         <h2>Referencias usadas</h2>
         <table><!--Representa el elemento tabla-->
@@ -81,8 +113,16 @@
                 <td>Ubicación de la vecindad del Chavo</td>
             </tr>
             <tr>
-                <td>https://developer.mozilla.org/es/docs/Web/CSS/td>
+                <td>https://developer.mozilla.org/es/docs/Web/CSS/td</td>
                 <td>Documentación y uso de CSS</td>
+            </tr>
+            <tr>
+                <td>https://p5js.org/reference/</td>
+                <td>Documentación de la libreria p5.js</td>
+            </tr>
+            <tr>
+                <td>https://chavoanimado.com/personajes</td>
+                <td>Imágenes para las tarjetas del mapa</td>
             </tr>
         </table>
     </article>
