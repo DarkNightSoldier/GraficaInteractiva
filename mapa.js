@@ -1,6 +1,10 @@
+//Script hecho por Alejandro Higuera Castro para la clase de Gráfica Interactiva
+
 var fondo, tarjeta, tarjeta1, tarjeta2, tarjeta3, tarjeta4, tarjeta5;
+var botonAtras, botonAdelante, botonAdelanteAlpha, botonAtrasAlpha;
 var boton1 = false, boton2 = false, boton3 = false, boton4 = false, boton5 = false;
 var posX=0;
+var canvas;
 
 function preload(){
   fondo = loadImage("archivos/fondo.png");
@@ -10,10 +14,14 @@ function preload(){
   tarjeta3 = loadImage("archivos/tarjeta3.png");
   tarjeta4 = loadImage("archivos/tarjeta4.png");
   tarjeta5 = loadImage("archivos/tarjeta5.png");
+  botonAtras = loadImage("archivos/atras.png");
+  botonAdelanteAlpha = loadImage("archivos/opacadelante.png")
+  botonAtrasAlpha = loadImage("archivos/opacatras.png")
+  botonAdelante = loadImage("archivos/adelante.png");
 }
 
 function setup() {
-  var canvas = createCanvas(600, 400);
+  canvas = createCanvas(600, 400);
   // Vincula al elemento con id canvas, el lienzo generado por p5.js
   canvas.parent("map");
   fondo.resize(0,800);
@@ -23,6 +31,7 @@ function draw() {
   background(220);
   pasarFondo();
   image(fondo,0,-150);
+  botonesAvance();
   botonBarril();
   botonDepJaimito();
   botonDepFlorinda();
@@ -38,9 +47,27 @@ function pasarFondo(){
     }else if(keyCode==37 & posX<0){
       posX +=5;
     }
-    print(posX);
   }
   translate(posX,0);
+}
+
+function botonesAvance(){
+  if(mouseIsPressed & (20<=mouseX & 40>=mouseX) & (360<=mouseY & 400>=mouseY)){
+    image(botonAtras,20-posX,350);
+    if(posX<0){
+      posX +=5;
+    }
+  }else{
+    image(botonAtrasAlpha,20-posX,350);
+  }
+  if(mouseIsPressed & (width-60<=mouseX & width-20>=mouseX) & (360<=mouseY & 400>=mouseY)){
+    image(botonAdelante,width-60-posX,350);
+    if(posX>=-885){
+      posX -=5;
+    }
+  }else{
+    image(botonAdelanteAlpha,width-60-posX,350);
+  }
 }
 
 function botonBarril(){
