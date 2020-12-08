@@ -5,7 +5,7 @@ var botonAtras, botonAdelante, botonAdelanteAlpha, botonAtrasAlpha;
 var boton1 = false, boton2 = false, boton3 = false, boton4 = false, boton5 = false;
 var posX=0;
 var canvas;
-var widthWindow;
+var sizeX;
 
 function preload(){
   fondo = loadImage("archivos/fondo.png");
@@ -29,7 +29,16 @@ function setup() {
 }
 
 function adjustCanvas(){
-  document.getElementById("defaultCanvas0").style = "width:400px; height:400px; margin:auto; display:block;"
+  print(window.innerWidth);
+  if(window.innerWidth>860){
+    sizeX = 840;
+  }else if(window.innerWidth<860 & window.innerWidth>=640){
+    sizeX = document.body.clientWidth*0.8-40;
+  }else{
+    sizeX = document.body.clientWidth-40;
+  }
+  resizeCanvas(sizeX,400);
+  document.getElementById("defaultCanvas0").style = "width:"+sizeX+"px; height:400px; margin:auto; display:block;";
 }
 
 function draw() {
@@ -48,12 +57,13 @@ function draw() {
 
 function pasarFondo(){
   if(keyIsPressed){
-    if(keyCode==39 & posX>=-885){
+    if(keyCode==39 & posX>=-655){
       posX -=5;
     }else if(keyCode==37 & posX<0){
       posX +=5;
     }
   }
+  print(posX);
   translate(posX,0);
 }
 
