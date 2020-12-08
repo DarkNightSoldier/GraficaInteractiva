@@ -13,7 +13,7 @@ function preload(){
 }
 
 function setup() {
-  var canvas = createCanvas(600, 400);
+  var canvas = createCanvas(window.innerWidth, 400,WEBGL);
   // Vincula al elemento con id canvas, el lienzo generado por p5.js
   canvas.parent("map");
   fondo.resize(0,800);
