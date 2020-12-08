@@ -289,7 +289,7 @@ iframe{
 }
 
 /*Define el ancho y alto del mapa interactivo*/
-#map{
+#map,#p5Canvas{
 	display: block;
 	margin: auto;
 	width: 100%; /*El ancho será de acuerdo al tamaño de la ventana*/
