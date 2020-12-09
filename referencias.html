@@ -70,6 +70,53 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="column">
+                <img class="character" src="archivos/code.png" alt="codigo"></img>
+            </div>
+            <div class="column">
+                <h4>3. Implementación de botones</h4>
+
+                <p>Para la implementación de los botones se uso la función <b>circle()</b> de p5.js que permite dibujar un círculo y se verificó con el booleano
+                    <code>if(mouseIsPressed & (posX-size<=mouseX & posX+size>=mouseX) & (posY-size<=mouseY & posY+size>=mouseY))</code> si se estaba presionando
+                    el botón.</p>
+                
+                <p>Al presionar el botón se cambia el color de este y se activa la tarjeta correspondiente, con el fin de dar la interacción buscada con
+                    el usuario.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="character" src="archivos/navigation.png" alt="navegacion"></img>
+            </div>
+            <div class="column">
+                <h4>4. Navegación por el mapa</h4>
+                <p>El mapa presenta una navegación similar al ejemplo "palenque2" de Phaser enviado por el docente.
+                    Se puede navegar por el mapa presionando las ⬅️ y ➡️ en el caso de los computadores, y con los botones de la parte inferior en el caso de los
+                    dispositivos móviles. La imagen panorámica para este mapa fue obtenida de <a href="https://www.youtube.com/watch?v=ren-k2DTRvY" target="_blank">Youtube-La Vecindad 360°</a>.</p>
+                <p>La navegación implementada facilita la implementación del diseño responsive y permite que en cualquier tamaño de dispositivo pueda ser consultado el
+                    mapa interactivo.</p>
+                <p>Cabe resaltar que se siguieron las indicaciones del docente en caso de hacer un mapa grande, la cual fue mover todos los objetos mientras se mueve el
+                    fondo esto fue posible gracias a la función <b>translate()</b> de p5.js que traslada todos elementos que se colocan con la función draw().
+                </p>
+            </div>
+        </div>
+
+        <h4>5. Redimensionamiento del canvas para cumplir con el RWD</h4>
+        <p>Para permitir el redimensionamiento del canvas, se colocó un width de 100% en el estilo del div donde está contenido el canvas y se implementó una
+            función dentro del script llamada <b>adjustCanvas()</b> que redimensiona el canvas de acuerdo al tamaño del dispositivo donde se consulta.</p>
+        <p>Esta función toma el ancho del dispositivo donde se consulta con <b>document.body.clientWidth</b> y cambia el estilo del canvas generado por p5.js
+        con <code>document.getElementById("defaultCanvas0").style = "width:"+sizeX+"px; height:400px; margin:auto; display:block;";</code>. El mapa al cambiarse
+        de tamaño puede seguir siendo navegado dado que maneja una imagen panorámica como fondo y por el punto 4 donde se nombra la parte de navegación.</p>
+
+        <p>A continuación se muestra la vista en móvil y en tableta:</p>
+
+        <img class="character" src="archivos/responsive.png" alt="Diseño adaptativo"></img>
+
+        <p>Como es posible ver los botones también cambian de posición con el fin de adaptarse al cambio del tamaño del canvas,para ello se fijó su posición de
+            acuerdo con el tamaño del canvas.</p>
+
         <h2>Referencias usadas</h2>
         <table><!--Representa el elemento tabla-->
             <tr><!--Representa una fila de la tabla-->
@@ -123,6 +170,10 @@
             <tr>
                 <td>https://chavoanimado.com/personajes</td>
                 <td>Imágenes para las tarjetas del mapa</td>
+            </tr>
+            <tr>
+                <td>https://www.youtube.com/watch?v=ren-k2DTRvY</td>
+                <td>Vista de la vecindad del chavo en 360*</td>
             </tr>
         </table>
     </article>
